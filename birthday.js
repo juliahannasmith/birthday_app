@@ -60,3 +60,4 @@ function getSign() {
 };
 
 signButton.addEventListener('click', getSign);
+
