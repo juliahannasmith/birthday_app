@@ -1,6 +1,7 @@
-this.getSign = function () {
+var signButton = document.getElementById("getSign");
 
-    var birthdate = new Date(this.birthdate);
+function getSign() {
+    var birthdate = new Date(document.getElementById('inputDate').value);
     var month = birthdate.getMonth() + 1;
     var day = birthdate.getDate();
     var sign;
@@ -57,3 +58,5 @@ this.getSign = function () {
 
     return sign;
 };
+
+signButton.addEventListener('click', getSign);
