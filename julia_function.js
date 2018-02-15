@@ -4,8 +4,9 @@ function getSign() {
     var birthdate = new Date(document.getElementById('inputDate').value);
     var month = birthdate.getMonth() + 1;
     var day = birthdate.getDate();
-    var sign =
-        if (month == 1 || month == 2) {
+    var sign = "";
+
+    if (month == 1 || month == 2) {
         if ((day >= 20 && month == 1) || (day <= 18 && month == 2)) {
             sign = "Aquarius";
         }
@@ -58,4 +59,9 @@ function getSign() {
     return sign;
 };
 
-signButton.addEventListener('click', getSign);
+function displaySign(){
+    var result = getSign();
+
+    document.getElementById('signText').textContent = result;
+}
+signButton.addEventListener('click', displaySign);
