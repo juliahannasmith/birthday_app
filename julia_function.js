@@ -52,20 +52,10 @@ function getSign() {
     } else if (month == 12 || month == 1) {
         if ((day >= 22 && month == 12) || (day <= 19 && month == 1)) {
             sign = "Capricorn";
-        }   }
+        }
+    }
+
     return sign;
 };
 
-
-
-
-function displayDays(){
-    var input = document.getElementById('inputDate').value;
-    var result = getSign(input);
-
-    document.getElementById('signText').textContent = result;
-}
-
 signButton.addEventListener('click', getSign);
-
-
