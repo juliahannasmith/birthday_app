@@ -68,3 +68,10 @@ function displayDays(){
 
 signButton.addEventListener('click', getSign);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
+>>>>>>> origin/master
