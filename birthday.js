@@ -1,7 +1,7 @@
 var signButton = document.getElementById("getSign");
 
 function getSign() {
-    var birthdate = new Date(document.getElementById('inputDate').value);
+    var birthdate = new Date(document.getElementById('inputDate'.value));
     var month = birthdate.getMonth() + 1;
     var day = birthdate.getDate();
     var sign;
