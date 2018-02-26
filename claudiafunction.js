@@ -9,6 +9,11 @@ function getAge() {
     }
     return age;
 }
+function displayAge(){
+    var input = document.getElementById('Age').value;
+    var result = agebutton(input);
+
+    document.getElementById('signText').textContent = result;
 }
-signButton.addEventListener('click', getAge);
+signButton.addEventListener('click', displayAge);
 
