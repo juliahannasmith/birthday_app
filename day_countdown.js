@@ -29,9 +29,9 @@ return daysuntil;
 
 
 function displayDays(){
-    var result = birthdayCountDown();
+    var finaldays = birthdayCountDown();
 
-    document.getElementById('birthdayCountdowndays').textContent = result;
+    document.getElementById('birthdayCountdowndays').textContent = finaldays;
 }
 
 countdownButton.addEventListener('click', getDayCountdown);
