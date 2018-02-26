@@ -3,7 +3,7 @@ var countdownButton = document.getElementById('getDayCountdown');
 function birthdayCountDown() {
 
     var today = new Date();
-    var bday = new Date(getElementById('inputDate').value);
+    var bday = new Date(document.getElementById('inputDate').value);
     var currenttime = today.getTime();
     var btime = bday.getTime();
 
@@ -20,7 +20,7 @@ function birthdayCountDown() {
 
     var daysuntil = Math.ceil((bday.getTime() / 86400000) - (today.getTime() / 86400000));
 
-return daysuntil;
+    return daysuntil;
 
 
 }
@@ -28,12 +28,10 @@ return daysuntil;
 
 
 
-function displayDays(){
-    var result = birthdayCountDown();
+function displayDays() {
+    var finaldays = birthdayCountDown();
 
-    document.getElementById('birthdayCountdowndays').textContent = result;
+    document.getElementById('birthdayCountdowndays').textContent = finaldays;
 }
 
-countdownButton.addEventListener('click', getDayCountdown);
-
-
+countdownButton.addEventListener('click', displayDays);
