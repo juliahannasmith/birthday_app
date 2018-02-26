@@ -3,7 +3,7 @@ var countdownButton = document.getElementById('getDayCountdown');
 function birthdayCountDown() {
 
     var today = new Date();
-    var bday = new Date(getElementById('inputDate').value);
+    var bday = new Date(document.getElementById('inputDate').value);
     var currenttime = today.getTime();
     var btime = bday.getTime();
 
@@ -34,4 +34,4 @@ function displayDays() {
     document.getElementById('birthdayCountdowndays').textContent = finaldays;
 }
 
-countdownButton.addEventListener('click', getDayCountdown);
+countdownButton.addEventListener('click', displayDays);
