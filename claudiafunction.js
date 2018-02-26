@@ -16,5 +16,5 @@ function displayAge(){
 
     document.getElementById('signText').textContent = result;
 }
-signButton.addEventListener('click', displayAge);
+ageButton.addEventListener('click', displayAge);
 
