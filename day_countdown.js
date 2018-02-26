@@ -1,9 +1,9 @@
 var countdownButton = document.getElementById('getDayCountdown');
 
-function birthdayCountDown() {
+function birthdayCountDown(bdate) {
 
     var today = new Date();
-    var bday = new Date(document.getElementById('inputDate').value);
+    var bday = new Date(bdate);
     var currenttime = today.getTime();
     var btime = bday.getTime();
 
@@ -29,7 +29,7 @@ return daysuntil;
 
 
 function displayDays(){
-    var input = document.getElementById('inputDate').value;
+    var input = new Date(document.getElementById('inputDate').value);
     var result = birthdayCountDown(input);
 
     document.getElementById('signText').textContent = result;
