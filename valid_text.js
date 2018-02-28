@@ -15,22 +15,22 @@ function validText(){
 
 
 
-var countdownButton = document.getElementById('getDayCountdown');
-var signButton = document.getElementById('getSign');
-var agebutton = document.getElementById('calculateAge');
+var countdownButton1 = document.getElementById('getDayCountdown');
+var signButton1 = document.getElementById('getSign');
+var agebutton1 = document.getElementById('calculateAge');
 
 
 
 function displayerror() {
     var date = document.getElementById('inputDate').value;
     var sorry = "Sorry that is an invalid date. Please try again.";
-    if (new Date(date).getTime() == NaN) {
+    if (isNaN(new Date(date).getTime) == "true") {
         document.getElementById('errorText').textContent = sorry;
 
     }
 }
 
 
-countdownButton.addEventListener('click', displayerror);
-signButton.addEventListener('click', displayerror);
-agebutton.addEventListener('click', displayerror);
+countdownButton1.addEventListener('click', displayerror);
+signButton1.addEventListener('click', displayerror);
+agebutton1.addEventListener('click', displayerror);
