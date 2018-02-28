@@ -25,9 +25,8 @@ function displayerror() {
     var date = document.getElementById('inputDate').value;
     var sorry = "Sorry that is an invalid date. Please try again.";
     if (new Date(date).getDay == NaN) {
-        document.getElementById('birthdayCounddowndays').textContent = sorry;
-        document.getElementById('signText').textContent = sorry;
-        document.getElementById('age').textContent = sorry;
+        document.getElementById('errorText').textContent = sorry;
+
     }
 }
 
