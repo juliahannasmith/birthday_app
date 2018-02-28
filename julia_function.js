@@ -66,10 +66,3 @@ function displaySign(){
 }
 
 signButton.addEventListener('click', displaySign);
-
-
-var textButton = document.getElementById('age');
-
-function validText(){
-    if ()
-}
