@@ -24,7 +24,7 @@ var agebutton = document.getElementById('calculateAge');
 function displayerror() {
     var date = document.getElementById('inputDate').value;
     var sorry = "Sorry that is an invalid date. Please try again.";
-    if (new Date(date).getDay == NaN) {
+    if (new Date(date).getTime() == NaN) {
         document.getElementById('errorText').textContent = sorry;
 
     }
