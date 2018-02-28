@@ -1,19 +1,3 @@
-var textButton = document.getElementById('age');
-
-function validText(){
-    if ()
-}
-
-
-
-
-
-
-
-
-
-
-
 
 var countdownButton1 = document.getElementById('getDayCountdown');
 var signButton1 = document.getElementById('getSign');
