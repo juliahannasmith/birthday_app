@@ -64,4 +64,12 @@ function displaySign(){
 
     document.getElementById('signText').textContent = result;
 }
+
 signButton.addEventListener('click', displaySign);
+
+
+var textButton = document.getElementById('age');
+
+function validText(){
+    if ()
+}
