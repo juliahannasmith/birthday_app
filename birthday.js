@@ -4,8 +4,9 @@ function getSign() {
     var birthdate = new Date(document.getElementById('inputDate').value);
     var month = birthdate.getMonth() + 1;
     var day = birthdate.getDate();
-    var sign =
-        if (month == 1 || month == 2) {
+    var sign = "";
+
+    if (month == 1 || month == 2) {
         if ((day >= 20 && month == 1) || (day <= 18 && month == 2)) {
             sign = "Aquarius";
         }
@@ -52,26 +53,16 @@ function getSign() {
     } else if (month == 12 || month == 1) {
         if ((day >= 22 && month == 12) || (day <= 19 && month == 1)) {
             sign = "Capricorn";
-        }   }
+        }
+    }
+
     return sign;
 };
 
-
-
-
-function displayDays(){
-    var input = document.getElementById('inputDate').value;
-    var result = getSign(input);
+function displaySign(){
+    var result = getSign();
 
     document.getElementById('signText').textContent = result;
 }
 
-signButton.addEventListener('click', getSign);
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
->>>>>>> origin/master
+signButton.addEventListener('click', displaySign);
