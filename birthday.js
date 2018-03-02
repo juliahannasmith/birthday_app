@@ -1,5 +1,7 @@
 var clickbutton = document.getElementById('calculateAll');
 
+
+
 function getSign(input) {
     var birthdate = new Date(input);
     var month = birthdate.getMonth() + 1;
@@ -91,26 +93,49 @@ function getAge(input) {
     var today = new Date();
     var birthdate = new Date(input);
     var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
+    if (birthdate.getMonth() < today.getMonth()) {
+        age--;
+    }
 
     return age;
 }
 
 
-
-
+function checkDate(input) {
+    if (input.length != 10) {
+        return false;
+    } else {
+        var check1 = input.substring(2,3);
+        var check2 = input.substring(5,6);
+        if (check1 != "/" && check2  != "/"){
+            return false;
+        }
+        var date = new Date(input);
+        if (isNaN(date.getTime()) == true) {
+            return false;
+        }
+    }
+    return true;
+}
 
 
 function displayFinalResult(){
     var input = document.getElementById('inputDate').value;
+    var sorry = "Sorry that is an invalid date. Please try again.";
+if (checkDate(input) == false){
 
+        document.getElementById('result').textContent = sorry;
+    } else {
     var result1 = getSign(input);
     var result2 = birthdayCountDown(input);
     var result3 = getAge(input);
     var finalResult = "You are " + result3 + " years old, your star sign is " + result1 + ", and there are " + result2 + " days until your next birthday.";
+        document.getElementById('result').textContent = finalResult;
+    }
 
 
 
-    document.getElementById('result').textContent = finalResult;
+
 }
 
 
