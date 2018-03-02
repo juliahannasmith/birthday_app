@@ -84,16 +84,27 @@ function birthdayCountDown() {
 
 }
 
+function getAge() {
+    var today = new Date();
+    var birthdate = new Date(document.getElementById('inputDate').value);
+    var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
+
+    return "You are " + age + " years old!";
+}
 
 
 
 
 
-function displayDays(){
+
+function displayFinalResult(){
     var input = document.getElementById('inputDate').value;
-    var result = getSign(input);
+    var result 1 = getSign();
+    var result2 = birthdayCountDown();
+    var result3 = getAge();
+    var finalResult = "You are " + result3 + " years old, " + "your star"
 
-    document.getElementById('signText').textContent = result;
+    document.getElementById('signText').textContent = ;
 }
 
 signButton.addEventListener('click', getSign);
