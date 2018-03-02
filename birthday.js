@@ -1,7 +1,6 @@
 var clickbutton = document.getElementById('calculateAll');
 
 
-
 function getSign(input) {
     var birthdate = new Date(input);
     var month = birthdate.getMonth() + 1;
