@@ -1,7 +1,7 @@
 var clickbutton = document.getElementById('calculateAll');
 
 function getSign(input) {
-    var birthdate = input;
+    var birthdate = new Date(input);
     var month = birthdate.getMonth() + 1;
     var day = birthdate.getDate();
     var sign = "";
@@ -65,7 +65,7 @@ function getSign(input) {
 function birthdayCountDown(input) {
 
     var today = new Date();
-    var bday = input;
+    var bday = new Date(input);
     var currenttime = today.getTime();
     var btime = bday.getTime();
 
@@ -89,7 +89,7 @@ function birthdayCountDown(input) {
 
 function getAge(input) {
     var today = new Date();
-    var birthdate = input;
+    var birthdate = new Date(input);
     var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
 
     return age;
