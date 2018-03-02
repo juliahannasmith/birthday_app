@@ -1,7 +1,5 @@
 
-var countdownButton1 = document.getElementById('getDayCountdown');
-var signButton1 = document.getElementById('getSign');
-var agebutton1 = document.getElementById('calculateAge');
+var button = document.getElementById('calculateAll');
 
 
 
@@ -15,7 +13,4 @@ function displayerror() {
 
 }
 
-
-countdownButton1.addEventListener('click', displayerror);
-signButton1.addEventListener('click', displayerror);
-agebutton1.addEventListener('click', displayerror);
+button.addEventListener('click', displayerror);
