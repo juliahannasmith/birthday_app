@@ -1,4 +1,4 @@
-var signButton = document.getElementById('getSign');
+var signButton = document.getElementById('calculateAll');
 
 function getSign() {
     var birthdate = new Date(document.getElementById('inputDate').value);
