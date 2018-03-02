@@ -112,7 +112,7 @@ signButton.addEventListener('click', getSign);
 
 
 // AGE!!!!
-var agebutton = document.getElementById("calculateAge");
+var agebutton = document.getElementById("calculateAll");
 function getAge() {
     var today = new Date();
     var birthdate = new Date(document.getElementById('inputDate').value);
@@ -123,7 +123,7 @@ function getAge() {
 function displayAge(){
     var result = getAge();
 
-    document.getElementById('age').textContent = result;
+    document.getElementById('result').textContent = result;
 }
 agebutton.addEventListener('click', displayAge);
 >>>>>>> origin/master
