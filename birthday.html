@@ -4,34 +4,23 @@
 <head>
     <title>Birthday App</title>
 </head>
-
+<style>
+    html body{
+        background-color: #E4FCF7;
+    }
+</style>
 <body>
     <h1>Welcome to the Birthday App!</h1>
     <p>
-        <h3>Enter Your Birthdate and We'll Calculate Your Age!</h3>
+        <h3>Enter Your Birthdate and We'll Calculate Your Age, Sign and the Days Till Your Birthday!</h3>
     </p>
     <p>
-
         <input type="text" id="inputDate"><br/><br/>
         <div id="errorText"></div>
-        <button id="calculateAge">Calculate Age</button>
-        <div id="age"></div>
+        <button id="calculateAll">Calculate Age</button>
+        <div id="result"></div>
         <hr/>
     </p>
-    <p>
-        <h3>Click to Get Your Astrological Sign!</h3>
-        <button id="getSign">Get Sign</button>
-        <div id="signText"></div>
-        <hr/>
-    </p>
-    <p>
-        <h3>Click to Get The Days Till Your Birthday!</h3>
-        <button id="getDayCountdown">Get Days Until Your Bithday</button>
-        <div id="birthdayCountdowndays"></div>
-        <hr/>
-    </p>
-    <script src="day_countdown.js"></script>
-    <script src="julia_function.js"></script>
-    <script src="claudiafunction.js"></script>
+    <script src="birthday.js"></script>
 </body>
 </html>

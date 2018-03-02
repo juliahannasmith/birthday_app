@@ -1,4 +1,4 @@
-var signButton = document.getElementById('getSign');
+var signButton = document.getElementById('calcualteAll');
 
 function getSign() {
     var birthdate = new Date(document.getElementById('inputDate').value);
@@ -62,7 +62,7 @@ function getSign() {
 function displaySign(){
     var result = getSign();
 
-    document.getElementById('signText').textContent = result;
+    document.getElementById('result').textContent = result;
 }
 
 signButton.addEventListener('click', displaySign);
