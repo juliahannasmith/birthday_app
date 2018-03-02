@@ -118,5 +118,21 @@ clickbutton.addEventListener('click', displayFinalResult);
 
 
 
+<<<<<<< HEAD
+=======
+// AGE!!!!
+var agebutton = document.getElementById("calculateAll");
+function getAge() {
+    var today = new Date();
+    var birthdate = new Date(document.getElementById('inputDate').value);
+    var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
+>>>>>>> origin/master
 
 
+<<<<<<< HEAD
+=======
+    document.getElementById('result').textContent = result;
+}
+agebutton.addEventListener('click', displayAge);
+>>>>>>> origin/master
+>>>>>>> origin/master
