@@ -59,10 +59,71 @@ function getSign() {
     return sign;
 };
 
+<<<<<<< HEAD
 function displaySign(){
     var result = getSign();
+=======
+
+
+
+function birthdayCountDown() {
+
+    var today = new Date();
+    var bday = new Date(document.getElementById('inputDate').value);
+    var currenttime = today.getTime();
+    var btime = bday.getTime();
+
+    if ((btime - currenttime) < 0) {
+
+
+        bday.setFullYear(today.getFullYear());
+
+        if ((bday.getTime() - today.getTime()) < 0) {
+            bday.setFullYear(bday.getFullYear() + 1);
+        }
+
+    }
+
+    var daysuntil = Math.ceil((bday.getTime() / 86400000) - (today.getTime() / 86400000));
+
+    return daysuntil;
+
+
+}
+
+
+
+
+
+
+function displayDays(){
+    var input = document.getElementById('inputDate').value;
+    var result = getSign(input);
+>>>>>>> origin/master
 
     document.getElementById('signText').textContent = result;
 }
 
+<<<<<<< HEAD
 signButton.addEventListener('click', displaySign);
+=======
+signButton.addEventListener('click', getSign);
+
+
+
+// AGE!!!!
+var agebutton = document.getElementById("calculateAge");
+function getAge() {
+    var today = new Date();
+    var birthdate = new Date(document.getElementById('inputDate').value);
+    var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
+
+    return "You are " + age + " years old!";
+}
+function displayAge(){
+    var result = getAge();
+
+    document.getElementById('age').textContent = result;
+}
+agebutton.addEventListener('click', displayAge);
+>>>>>>> origin/master
