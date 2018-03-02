@@ -1,11 +1,12 @@
-var signButton = document.getElementById('getSign');
+var clickbutton = document.getElementById('calculateAll');
 
-function getSign() {
-    var birthdate = new Date(document.getElementById('inputDate').value);
+function getSign(input) {
+    var birthdate = input;
     var month = birthdate.getMonth() + 1;
     var day = birthdate.getDate();
-    var sign =
-        if (month == 1 || month == 2) {
+    var sign = "";
+
+    if (month == 1 || month == 2) {
         if ((day >= 20 && month == 1) || (day <= 18 && month == 2)) {
             sign = "Aquarius";
         }
@@ -52,17 +53,19 @@ function getSign() {
     } else if (month == 12 || month == 1) {
         if ((day >= 22 && month == 12) || (day <= 19 && month == 1)) {
             sign = "Capricorn";
-        }   }
+        }
+    }
+
     return sign;
 };
 
 
 
 
-function birthdayCountDown() {
+function birthdayCountDown(input) {
 
     var today = new Date();
-    var bday = new Date(document.getElementById('inputDate').value);
+    var bday = input;
     var currenttime = today.getTime();
     var btime = bday.getTime();
 
@@ -84,12 +87,12 @@ function birthdayCountDown() {
 
 }
 
-function getAge() {
+function getAge(input) {
     var today = new Date();
-    var birthdate = new Date(document.getElementById('inputDate').value);
+    var birthdate = input;
     var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
 
-    return "You are " + age + " years old!";
+    return age;
 }
 
 
@@ -99,30 +102,21 @@ function getAge() {
 
 function displayFinalResult(){
     var input = document.getElementById('inputDate').value;
-    var result 1 = getSign();
-    var result2 = birthdayCountDown();
-    var result3 = getAge();
-    var finalResult = "You are " + result3 + " years old, " + "your star"
 
-    document.getElementById('signText').textContent = ;
+    var result1 = getSign(input);
+    var result2 = birthdayCountDown(input);
+    var result3 = getAge(input);
+    var finalResult = "You are " + result3 + " years old, your star sign is " + result1 + ", and there are " + result2 + " days until your next birthday.";
+
+
+
+    document.getElementById('result').textContent = finalResult;
 }
 
-signButton.addEventListener('click', getSign);
+
+clickbutton.addEventListener('click', displayFinalResult);
 
 
 
-// AGE!!!!
-var agebutton = document.getElementById("calculateAge");
-function getAge() {
-    var today = new Date();
-    var birthdate = new Date(document.getElementById('inputDate').value);
-    var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
 
-    return "You are " + age + " years old!";
-}
-function displayAge(){
-    var result = getAge();
 
-    document.getElementById('age').textContent = result;
-}
-agebutton.addEventListener('click', displayAge);
