@@ -92,7 +92,7 @@ function getAge(input) {
     var today = new Date();
     var birthdate = new Date(input);
     var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
-    if (birthdate.getMonth() > today.getMonth()) {
+    if (birthdate.getTime() > today.getTime()) {
         age--;
     }
 
