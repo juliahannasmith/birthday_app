@@ -91,9 +91,9 @@ function birthdayCountDown(input) {
 function getAge(input) {
     var today = new Date();
     var birthdate = new Date(input);
-    var age = Math.floor((today - birthdate)/ (360 * 24 * 60 * 60 * 1000));
+    var age = Math.floor((today.getTime() - birthdate.getTime()) / (1000 * 60 * 60 * 24 * 365));
     if (birthdate.getTime() > today.getTime()) {
-        age--;
+        age = age - 1;
     }
 
     return age;
